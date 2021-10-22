@@ -14,7 +14,17 @@ public class Aluno {
 	private String dataMatricula;
 	private String nomeEscola;
 	private String serieMtriculado;
-
+	
+	
+	private Disciplina Disciplina = new Disciplina();
+	
+	public void setDisciplina(Disciplina disciplina) {
+		Disciplina = disciplina;
+	}
+	public Disciplina getDisciplina() {
+		return Disciplina;
+	}
+	
 
 	/*public Aluno() {CRIA DADOS NA MEMORIA SENDO PADRAO JAVA
 		
@@ -29,6 +39,19 @@ public class Aluno {
 	
 	/* GET E SETRS SET SAO PARA ADICIONAR OU RECEBER DADOS DO ATRIBUTO
 	 * GET E PARA RESGATAR OU OBTER VALOR DO ATRIBUTO*/
+	
+	
+	public double getMedia() {/*METODO QUE RETORNA SOMA DAS NOTAS*/
+		return(Disciplina.getNota1() + Disciplina.getNota2() + Disciplina.getNota3() + Disciplina.getNota4())/4;
+	}
+	public String getAprovado() {/*METODO QUE RETORNA APROVADOOU REPROVADO*/
+		double media = this.getMedia();
+		if (media>= 10) {
+			return "aprovado";
+		}else {
+			return "reprovado";
+		}
+	}
 	public String getNome() {
 		return nome;
 	}
@@ -89,6 +112,13 @@ public class Aluno {
 	public void setSerieMtriculado(String serieMtriculado) {
 		this.serieMtriculado = serieMtriculado;
 	}
+	
+	
+	
+	
+	
+	
+	
 	
 }
 
