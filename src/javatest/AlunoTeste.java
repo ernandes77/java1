@@ -65,14 +65,16 @@ public class AlunoTeste {
 		
 		int escolha =JOptionPane.showConfirmDialog(null, "deseja remover algumadisciplina");
 		
-		if(escolha ==0) {
+		if(escolha == 0) {/*opcao SIM e 0*/
 		
 			int continuarRemover = 0;
-			int poscicao = 1;
+			int posicao = 1;
 			
-			while(continuarRemover == 0) {
-			String removeDisciplina = JOptionPane.showInputDialog("qual disciplina 1,2,3, ou 4");
-			aluno1.getDisciplinas().remove(Integer.valueOf(removeDisciplina)-1);
+	while(continuarRemover == 0) {
+			String disciplinaRemover = JOptionPane.showInputDialog("qual disciplina 1,2,3, ou 4");
+			aluno1.getDisciplinas().remove(Integer.valueOf(disciplinaRemover).intValue()-posicao);
+			posicao++;
+			
 		
 	continuarRemover = JOptionPane.showConfirmDialog(null, "Deseja remover alguma disciplina: ");
 			}
@@ -124,8 +126,8 @@ public class AlunoTeste {
 		}		
 
 for (Aluno aluno : alunos) {
-	
-	
+		
+		
 	/* CHAMANDO METODO GET */
 	System.out.println("media: " + aluno.getMedia());
 	System.out.println("nota: " + aluno.getAprovado());
