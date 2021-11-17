@@ -16,7 +16,7 @@ public class AlunoTeste {
 
 		for(int qtd = 1;qtd <=2;qtd++) {
 		
-		String nome = JOptionPane.showInputDialog("QUALE SEU NOME: "+qtd+"");
+		String nome = JOptionPane.showInputDialog("QUALE SEU NOME : "+qtd+"");
 		String idade = JOptionPane.showInputDialog("QUALE SUA IDADE: ");
 		String dataNascimento = JOptionPane.showInputDialog("QUALE DUA DATA NASCIMENTO: ");
 		String registroGeral = JOptionPane.showInputDialog("QUALE SEU RG: ");
@@ -127,14 +127,27 @@ public class AlunoTeste {
 
 for (Aluno aluno : alunos) {
 		
-		
+		if(aluno.getNome().equalsIgnoreCase("ernandes")) {/*PROCURANDO UM ALUNO NA LISTA DE MEDIA*/
+		alunos.remove(aluno);
+		break;
+		}else{
+			
 	/* CHAMANDO METODO GET */
 	System.out.println("media: " + aluno.getMedia());
 	System.out.println("nota: " + aluno.getAprovado());
 	System.out.println("------------------");
-
-}		
-		
+		}		
+	}
+for (Aluno aluno : alunos) {
+	System.out.println("Aluno que sobraraona lista");
+	System.out.println(""+aluno.getNome());
+	System.out.println("Suas materias sao");
+	
+	for(Disciplina disciplina : aluno.getDisciplinas());{
+		System.out.println(disciplina.getDisciplina());}
+	
+	}
+}
 	
 		/*
 		 * Aluno aluno2 = new Aluno();AQUI SERA MARIA
@@ -165,4 +178,4 @@ for (Aluno aluno : alunos) {
 		 */
 
 	}
-}
+
