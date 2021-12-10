@@ -51,7 +51,7 @@ public class AlunoTeste {
 		aluno1.setNomeEscola(nomeEscola);
 		aluno1.setSerieMtriculado("SUPERIOR");
 
-		for(int pos= 0;pos< 4;pos++) {
+		for(int pos= 0;pos< 4;pos++) {/*ADICIONA DISCIPLINA*/
 			
 			String nomeDisciplina = JOptionPane.showInputDialog("nomeDisciplina: "+pos+" ^^");
 			String nota = JOptionPane.showInputDialog("nota: "+pos+"");
@@ -62,10 +62,10 @@ public class AlunoTeste {
 			
 			aluno1.getDisciplinas().add(disciplina);
 		}
-		
+		/*REMOVER DISCIPILINA*/
 		int escolha =JOptionPane.showConfirmDialog(null, "deseja remover algumadisciplina");
 		
-		if(escolha == 0) {/*opcao SIM e 0*/
+		if(escolha == 0) {/*opcao SIM e 0 ESCOLHER MAIS DE UMA DISCIPLINA PARAREMOVER*/
 		
 			int continuarRemover = 0;
 			int posicao = 1;
@@ -133,6 +133,7 @@ for (Aluno aluno : alunos) {
 		}else{
 			
 	/* CHAMANDO METODO GET */
+			System.out.println("aluno: "+aluno);
 	System.out.println("media: " + aluno.getMedia());
 	System.out.println("nota: " + aluno.getAprovado());
 	System.out.println("------------------");
@@ -140,13 +141,12 @@ for (Aluno aluno : alunos) {
 	}
 for (Aluno aluno : alunos) {
 	System.out.println("Aluno que sobraraona lista");
-	System.out.println(""+aluno.getNome());
+	System.out.println(aluno.getNome());
 	System.out.println("Suas materias sao");
-	
-	for(Disciplina disciplina : aluno.getDisciplinas());{
-		System.out.println(disciplina.getDisciplina());}
-	
+	for(Disciplina disciplina : aluno.getDisciplinas()) {
+		System.out.println(disciplina.getDisciplina());
 	}
+}
 }
 	
 		/*
