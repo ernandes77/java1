@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
+import contantesStaticos.StatusAluno;
+
 public class Aluno {
 
 	/* ESSES SAO OS ATRIBUTOS DO OBJETO */
@@ -56,12 +58,12 @@ public class Aluno {
 		
 	if(media >=5) {
 		if (media >= 7) {
-			return "aluno aprovado";
+			return StatusAluno.Aprovado;
 		} else {
-			return "aluno recuperacao";
+			return StatusAluno.Recuperacao;
 		}
 	}else {
-			return "aluno reprovado";
+			return StatusAluno.Reprovado;
 		}
 	}
 

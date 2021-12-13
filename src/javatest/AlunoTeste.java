@@ -14,7 +14,7 @@ public class AlunoTeste {
 
 		List<Aluno> alunos = new ArrayList<Aluno>();/*PECORRENDO A LISTA ALUNO COM FOR*/
 
-		for(int qtd = 1;qtd <=2;qtd++) {
+		for(int qtd = 1;qtd <=1;qtd++) {
 		
 		String nome = JOptionPane.showInputDialog("QUALE SEU NOME : "+qtd+"");
 		String idade = JOptionPane.showInputDialog("QUALE SUA IDADE: ");
@@ -53,8 +53,8 @@ public class AlunoTeste {
 
 		for(int pos= 0;pos< 4;pos++) {/*ADICIONA DISCIPLINA*/
 			
-			String nomeDisciplina = JOptionPane.showInputDialog("nomeDisciplina: "+pos+" ^^");
-			String nota = JOptionPane.showInputDialog("nota: "+pos+"");
+			String nomeDisciplina = JOptionPane.showInputDialog("nomeDisciplina = "+pos+" ^^ ");
+			String nota = JOptionPane.showInputDialog("nota = "+pos+" ^^ ");
 			
 			Disciplina disciplina = new Disciplina();
 			disciplina.setDisciplina(nomeDisciplina);
@@ -123,31 +123,24 @@ public class AlunoTeste {
 	
 		
 		alunos.add(aluno1);
-		}		
-
-for (Aluno aluno : alunos) {
-		
-		if(aluno.getNome().equalsIgnoreCase("ernandes")) {/*PROCURANDO UM ALUNO NA LISTA DE MEDIA*/
-		alunos.remove(aluno);
-		break;
-		}else{
+		}
+		for(int pos = 1; pos < alunos.size(); pos++) {
+			/*PECORRENDO LISTA PELA POSICAO COM FOR*/
+			Aluno aluno = alunos.get(pos); 
 			
-	/* CHAMANDO METODO GET */
-			System.out.println("aluno: "+aluno);
-	System.out.println("media: " + aluno.getMedia());
-	System.out.println("nota: " + aluno.getAprovado());
-	System.out.println("------------------");
-		}		
+			
+		
+			System.out.println(aluno.getNome());
+			System.out.println("Media = "+aluno.getMedia());
+			System.out.println("Resultado ="+aluno.getAprovado());
+			
+		for (Disciplina dis : aluno.getDisciplinas()) {
+			System.out.println("Disciplina ="+ dis.getDisciplina()+" Nota = "+ dis.getNota());
+			
+		}	
+		}
+		
 	}
-for (Aluno aluno : alunos) {
-	System.out.println("Aluno que sobraraona lista");
-	System.out.println(aluno.getNome());
-	System.out.println("Suas materias sao");
-	for(Disciplina disciplina : aluno.getDisciplinas()) {
-		System.out.println(disciplina.getDisciplina());
-	}
-}
-}
 	
 		/*
 		 * Aluno aluno2 = new Aluno();AQUI SERA MARIA
