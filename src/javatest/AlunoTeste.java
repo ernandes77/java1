@@ -128,12 +128,26 @@ public class AlunoTeste {
 			/*PECORRENDO LISTA PELA POSICAO COM FOR*/
 			Aluno aluno = alunos.get(pos); 
 			
+			if(aluno.getNome().equalsIgnoreCase("ernandes")) {
 			
+				/*TROCANDO O OBJETO NA LISTA PELO POSICAO*/
+				Aluno troca = new Aluno();
+				troca.setNome("troca de nome");
+				
+				Disciplina disciplina = new Disciplina();
+				disciplina.setDisciplina("matematica");
+				disciplina.setNota(90);
+				
+				troca.getDisciplinas().add(disciplina);
+				
+				alunos.set(pos, troca);
+				aluno = alunos.get(pos);
+				
 		
 			System.out.println(aluno.getNome());
 			System.out.println("Media = "+aluno.getMedia());
 			System.out.println("Resultado ="+aluno.getAprovado());
-			
+			}	
 		for (Disciplina dis : aluno.getDisciplinas()) {
 			System.out.println("Disciplina ="+ dis.getDisciplina()+" Nota = "+ dis.getNota());
 			
