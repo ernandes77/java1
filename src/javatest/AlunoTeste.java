@@ -1,20 +1,32 @@
 package javatest;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import javax.swing.JOptionPane;
 
+import contantesStaticos.StatusAluno;
 import java1.java.Aluno;
 import java1.java.Disciplina;
 
 public class AlunoTeste {
 
 	public static void main(String[] args) {
+		
+		String loing = JOptionPane.showInputDialog("qual seu loing");
+		String senha = JOptionPane.showInputDialog("qual sua senha");
+		
+		if(loing.equalsIgnoreCase("admin")&&senha.equalsIgnoreCase("admin")) {
 
 		List<Aluno> alunos = new ArrayList<Aluno>();/*PECORRENDO A LISTA ALUNO COM FOR*/
 
-		for(int qtd = 1;qtd <=1;qtd++) {
+		List<Aluno>alunosAprovados = new ArrayList<Aluno>();
+		List<Aluno>alunosRecuperacao = new ArrayList<Aluno>();
+		List<Aluno>alunosReprovado = new ArrayList<Aluno>();
+		
+		for(int qtd = 1;qtd <=2;qtd++) {
 		
 		String nome = JOptionPane.showInputDialog("QUALE SEU NOME : "+qtd+"");
 		String idade = JOptionPane.showInputDialog("QUALE SUA IDADE: ");
@@ -51,7 +63,7 @@ public class AlunoTeste {
 		aluno1.setNomeEscola(nomeEscola);
 		aluno1.setSerieMtriculado("SUPERIOR");
 
-		for(int pos= 0;pos< 4;pos++) {/*ADICIONA DISCIPLINA*/
+		for(int pos= 0 ; pos< 4; pos++) {/*ADICIONA DISCIPLINA*/
 			
 			String nomeDisciplina = JOptionPane.showInputDialog("nomeDisciplina = "+pos+" ^^ ");
 			String nota = JOptionPane.showInputDialog("nota = "+pos+" ^^ ");
@@ -79,110 +91,21 @@ public class AlunoTeste {
 	continuarRemover = JOptionPane.showConfirmDialog(null, "Deseja remover alguma disciplina: ");
 			}
 		}
-		/*CRIANDO LISTA
-		 * 
-		 * Disciplina disciplina1 = new Disciplina();
-		disciplina1.setDisciplina("port");
-		disciplina1.setNota(1);
-
-		aluno1.getDisciplinas().add(disciplina1);
-		
-
-		Disciplina disciplina2 = new Disciplina();
-		disciplina2.setDisciplina("JAVA");
-		disciplina2.setNota(10);
-		
-		aluno1.getDisciplinas().add(disciplina2);
-		
-		Disciplina disciplina3 = new Disciplina();
-		disciplina3.setDisciplina("Mat");
-		disciplina3.setNota(10);
-		
-		aluno1.getDisciplinas().add(disciplina3);
-		
-		Disciplina disciplina4 = new Disciplina();
-		disciplina4.setDisciplina("Logica");
-		disciplina4.setNota(0);
-		
-		aluno1.getDisciplinas().add(disciplina4);
-		
-*/		
-		
-		/* CHAMANDO METODO SET 
-		System.out.println("nome: " + aluno1.getNome());
-		System.out.println("idade: " + aluno1.getIdade());
-		System.out.println("dataNascimento: " + aluno1.getDataNascimento());
-		System.out.println("registro Geral: " + aluno1.getRegistroGeral());
-		System.out.println("CPF: " + aluno1.getNumeroCpf());
-		System.out.println("Pai: " + aluno1.getNomePai());
-		System.out.println("Mae: " + aluno1.getNomeMae());
-		System.out.println("data matricula: " + aluno1.getDataMatricula());
-		System.out.println("Nome da escola: " + aluno1.getNomeEscola());
-
-*/		
+	
 	
 		
 		alunos.add(aluno1);
 		}
-		for(int pos = 1; pos < alunos.size(); pos++) {
-			/*PECORRENDO LISTA PELA POSICAO COM FOR*/
-			Aluno aluno = alunos.get(pos); 
-			
-			if(aluno.getNome().equalsIgnoreCase("ernandes")) {
-			
-				/*TROCANDO O OBJETO NA LISTA PELO POSICAO*/
-				Aluno troca = new Aluno();
-				troca.setNome("troca de nome");
-				
-				Disciplina disciplina = new Disciplina();
-				disciplina.setDisciplina("matematica");
-				disciplina.setNota(90);
-				
-				troca.getDisciplinas().add(disciplina);
-				
-				alunos.set(pos, troca);
-				aluno = alunos.get(pos);
-				
-		
-			System.out.println(aluno.getNome());
-			System.out.println("Media = "+aluno.getMedia());
-			System.out.println("Resultado ="+aluno.getAprovado());
-			}	
-		for (Disciplina dis : aluno.getDisciplinas()) {
-			System.out.println("Disciplina ="+ dis.getDisciplina()+" Nota = "+ dis.getNota());
-			
-		}	
-		}
-		
-	}
-	
-		/*
-		 * Aluno aluno2 = new Aluno();AQUI SERA MARIA
-		 * 
-		 * aluno2.setNome("maria"); aluno2.setNota1(10); aluno2.setNota2(5);
-		 * aluno2.setNota3(0); aluno2.setNota4(1);
-		 * 
-		 * System.out.println("media: "+aluno2.getMedia());
-		 * System.out.println("nota: "+aluno2.getMedia());
-		 * System.out.println("------------------");
-		 * 
-		 * Aluno aluno3 = new Aluno();AQUI SERA PEDRO
-		 * 
-		 * 
-		 * aluno3.setNome("pedro");
-		 * 
-		 * 
-		 * Aluno aluno4 = new Aluno(); aluno4.setNome("victor");
-		 * 
-		 * 
-		 * 
-		 * System.out.println("Nome : " + aluno1.getNome());
-		 * System.out.println("nome : " + aluno2.getNome());
-		 * System.out.println("nome : " + aluno3.getNome());
-		 * System.out.println("nome : " + aluno4.getNome());
-		 * 
-		 * }
-		 */
+
 
 	}
+			
+
+	
+		}
+		
+	
+
+
+}	
 
