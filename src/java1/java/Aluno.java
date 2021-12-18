@@ -6,16 +6,10 @@ import java.util.Objects;
 
 import contantesStaticos.StatusAluno;
 
-public class Aluno {
+public class Aluno extends Pessoa {
 
 	/* ESSES SAO OS ATRIBUTOS DO OBJETO */
-	private String nome;
-	private int idade;
-	private String dataNascimento;
-	private String registroGeral;
-	private String numeroCpf;
-	private String nomePai;
-	private String nomeMae;
+
 	private String dataMatricula;
 	private String nomeEscola;
 	private String serieMtriculado;
