@@ -17,12 +17,16 @@ public class AlunoTesteHeranca {
 		diretor.setRegistroEducacao("123456");
 		
 		Secretario secretario = new Secretario();
-		secretario.setEcperiencia(1);;
+		secretario.setExperiencia(1);;
 		secretario.setNivelCargo("secretario");
 		
 		System.out.println(aluno);
 		System.out.println(secretario);
 		System.out.println(diretor);
+		
+		System.out.println("Salario Aluno e  = "+aluno.salario());
+		System.out.println("Salario Diretor e = "+diretor.salario());
+		System.out.println("Salario Secretario e = "+secretario.salario());
 	}
 
 }

@@ -1,6 +1,6 @@
 package java1.java;
 
-public class Pessoa {
+public abstract class Pessoa {
 	protected String nome;
 	protected int idade;
 	protected String dataNascimento;
@@ -8,6 +8,9 @@ public class Pessoa {
 	protected String numeroCpf;
 	protected String nomePai;
 	protected String nomeMae;
+	
+	public abstract double salario();
+	
 	public String getNome() {
 		return nome;
 	}

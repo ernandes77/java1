@@ -97,7 +97,13 @@ public class AlunoTeste {
 		alunos.add(aluno1);
 		}
 
+		for (Aluno aluno : alunos) {
+			System.out.println(""+aluno);
+			System.out.println("Situacao do aluno: "+aluno.getMedia());
+			System.out.println("Resultado : "+aluno.getAprovado());
+		}
 
+		
 	}
 			
 

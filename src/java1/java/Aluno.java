@@ -171,5 +171,10 @@ public class Aluno extends Pessoa {
 				+ ", dataMatricula=" + dataMatricula + ", nomeEscola=" + nomeEscola + ", serieMtriculado="
 				+ serieMtriculado + ", Disciplinas=" + Disciplinas + "]";
 	}
+	@Override
+	public double salario() {
+		
+		return 1800.98;
+	}
 
 }
