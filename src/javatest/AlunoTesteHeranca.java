@@ -31,6 +31,8 @@ public class AlunoTesteHeranca {
 		System.out.println("Salario Diretor e = "+diretor.salario());
 		System.out.println("Salario Secretario e = "+secretario.salario());
 		System.out.println("-------------------------------------------------------");
+		
+		
 	
 		teste(secretario);
 		teste(secretario);

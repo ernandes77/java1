@@ -33,5 +33,9 @@ public class Secretario extends Pessoa{
 		return 2500;
 	}
 	
-	
+	@Override
+	public boolean maiorDeIdade() {
+		
+		return super.maiorDeIdade();
+	}
 }

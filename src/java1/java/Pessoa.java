@@ -54,5 +54,8 @@ public abstract class Pessoa {
 		this.nomeMae = nomeMae;
 	}
 
+	public boolean maiorDeIdade() {
+		return idade >=18; 
+	}
 
 }

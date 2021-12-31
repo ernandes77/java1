@@ -177,4 +177,10 @@ public class Aluno extends Pessoa {
 		return 1800.98;
 	}
 
+	@Override
+	public boolean maiorDeIdade() {
+		
+		
+		return super.maiorDeIdade();
+	}
 }
