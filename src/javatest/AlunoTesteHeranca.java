@@ -8,7 +8,7 @@ import java1.java.Secretario;
 public class AlunoTesteHeranca {
 	
 	public static void main(String[] args) {
-		
+		/*AQUI E OS CONSTRUTORES DE OBJETOS*/
 		Aluno aluno = new Aluno();
 		aluno.setNome("ernandes");
 		aluno.setIdade(32);
