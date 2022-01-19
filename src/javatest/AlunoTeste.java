@@ -10,6 +10,8 @@ import javax.swing.JOptionPane;
 import contantesStaticos.StatusAluno;
 import java1.java.Aluno;
 import java1.java.Disciplina;
+import java1.java.Secretario;
+import javainterfaces.PermitirAcesso;
 
 public class AlunoTeste {
 
@@ -18,7 +20,15 @@ public class AlunoTeste {
 		String loing = JOptionPane.showInputDialog("qual seu loing");
 		String senha = JOptionPane.showInputDialog("qual sua senha");
 		
-		if(loing.equalsIgnoreCase("admin")&&senha.equalsIgnoreCase("admin")) {
+		Secretario secretario = new Secretario();
+		secretario.setLoing(loing);
+		secretario.setSenha(senha);
+		
+		
+		if(secretario.autenticar()) {
+		
+		
+	
 
 		List<Aluno> alunos = new ArrayList<Aluno>();/*PECORRENDO A LISTA ALUNO COM FOR*/
 
@@ -104,14 +114,16 @@ public class AlunoTeste {
 		}
 
 		
-	}
 			
 
-	
-		}
+		}else {
+			JOptionPane.showMessageDialog(null, "Acesso nao permetido!!!");
+		}	
+		
 		
 	
 
 
-}	
+		}}/*fim*/
+		
 

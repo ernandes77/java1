@@ -9,6 +9,8 @@ public abstract class Pessoa {
 	protected String nomePai;
 	protected String nomeMae;
 	
+	
+	/*metodo abastrado e que fica na classe pai e é obrigatorio para classes filhas*/
 	public abstract double salario();
 	
 	public String getNome() {

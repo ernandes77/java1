@@ -1,10 +1,30 @@
 package java1.java;
 
-public class Secretario extends Pessoa{
+import javainterfaces.PermitirAcesso;
+
+public class Secretario extends Pessoa implements PermitirAcesso{
 
 	protected String registro;
 	protected String nivelCargo;
 	protected int experiencia;
+	
+	private String loing;
+	private String senha;
+	
+	
+	
+	public String getLoing() {
+		return loing;
+	}
+	public void setLoing(String loing) {
+		this.loing = loing;
+	}
+	public String getSenha() {
+		return senha;
+	}
+	public void setSenha(String senha) {
+		this.senha = senha;
+	}
 	public String getRegistro() {
 		return registro;
 	}
@@ -33,9 +53,17 @@ public class Secretario extends Pessoa{
 		return 2500;
 	}
 	
-	@Override
+	@Override/*sobe escrevendo metodo */
 	public boolean maiorDeIdade() {
 		
 		return super.maiorDeIdade();
 	}
+
+
+	@Override
+	public boolean autenticar() {
+		// TODO Auto-generated method stub
+		return loing.equals("admin") && senha.equals("admin") ;
+	}
+	
 }
