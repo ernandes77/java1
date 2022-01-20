@@ -4,12 +4,13 @@ import javainterfaces.PermitirAcesso;
 
 public class Secretario extends Pessoa implements PermitirAcesso{
 
-	protected String registro;
-	protected String nivelCargo;
-	protected int experiencia;
+	private String registro;
+	private String nivelCargo;
+	private int experiencia;
 	
 	private String loing;
 	private String senha;
+	
 	
 	
 	
@@ -60,10 +61,11 @@ public class Secretario extends Pessoa implements PermitirAcesso{
 	}
 
 
+
 	@Override
-	public boolean autenticar() {
-		// TODO Auto-generated method stub
-		return loing.equals("admin") && senha.equals("admin") ;
+	public boolean autenticar(String loing, String senha) {
+		
+		return loing.equals("admin")&& senha.equals("admin");
 	}
 	
 }

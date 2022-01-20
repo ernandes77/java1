@@ -4,5 +4,6 @@ public interface PermitirAcesso {
 
 
 	
-	public boolean autenticar();
+	
+	public boolean autenticar(String loing, String senha);
 }

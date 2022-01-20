@@ -20,12 +20,11 @@ public class AlunoTeste {
 		String loing = JOptionPane.showInputDialog("qual seu loing");
 		String senha = JOptionPane.showInputDialog("qual sua senha");
 		
-		Secretario secretario = new Secretario();
-		secretario.setLoing(loing);
-		secretario.setSenha(senha);
+	
+	
 		
 		
-		if(secretario.autenticar()) {
+		if(new Secretario().autenticar(loing ,senha)) {
 		
 		
 	
