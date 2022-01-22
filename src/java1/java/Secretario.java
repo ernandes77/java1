@@ -64,7 +64,13 @@ public class Secretario extends Pessoa implements PermitirAcesso{
 
 	@Override
 	public boolean autenticar(String loing, String senha) {
-		
+		this.loing = loing;
+		this.senha = senha;
+		return autenticar();
+	}
+	@Override
+	public boolean autenticar() {
+		// TODO Auto-generated method stub
 		return loing.equals("admin")&& senha.equals("admin");
 	}
 	
