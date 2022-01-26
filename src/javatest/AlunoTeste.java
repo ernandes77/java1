@@ -10,6 +10,7 @@ import javax.swing.JOptionPane;
 import classesauxiliares.FuncaoAutenticacao;
 import contantesStaticos.StatusAluno;
 import java1.java.Aluno;
+import java1.java.Diretor;
 import java1.java.Disciplina;
 import java1.java.Secretario;
 import javainterfaces.PermitirAcesso;
@@ -24,11 +25,11 @@ public class AlunoTeste {
 		
 		
 		
-		PermitirAcesso permitirAcesso = new Secretario(loing,senha);/*interface e igual a objeto secretario*/
+		PermitirAcesso permitirAcesso = new Diretor(loing,senha);/*interface e igual a objeto secretario*/
 	
 		
 		
-		if( new FuncaoAutenticacao(permitirAcesso).autenticar()) {
+		if( new FuncaoAutenticacao (new Secretario(loing,senha)).autenticar()) {
 		
 		
 	
