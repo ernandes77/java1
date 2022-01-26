@@ -7,6 +7,7 @@ import java.util.Map;
 
 import javax.swing.JOptionPane;
 
+import classesauxiliares.FuncaoAutenticacao;
 import contantesStaticos.StatusAluno;
 import java1.java.Aluno;
 import java1.java.Disciplina;
@@ -20,11 +21,14 @@ public class AlunoTeste {
 		String loing = JOptionPane.showInputDialog("qual seu loing");
 		String senha = JOptionPane.showInputDialog("qual sua senha");
 		
-	
+		
+		
+		
+		PermitirAcesso permitirAcesso = new Secretario(loing,senha);/*interface e igual a objeto secretario*/
 	
 		
 		
-		if(new Secretario().autenticar(loing ,senha)) {
+		if( new FuncaoAutenticacao(permitirAcesso).autenticar()) {
 		
 		
 	

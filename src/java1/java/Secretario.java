@@ -12,20 +12,16 @@ public class Secretario extends Pessoa implements PermitirAcesso{
 	private String senha;
 	
 	
+	public Secretario(String loing, String senha) {
 	
-	
-	public String getLoing() {
-		return loing;
-	}
-	public void setLoing(String loing) {
 		this.loing = loing;
-	}
-	public String getSenha() {
-		return senha;
-	}
-	public void setSenha(String senha) {
 		this.senha = senha;
 	}
+	public Secretario() {
+		// TODO Auto-generated constructor stub
+	}
+	
+	
 	public String getRegistro() {
 		return registro;
 	}
