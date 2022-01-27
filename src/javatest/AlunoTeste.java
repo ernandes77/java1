@@ -19,6 +19,9 @@ public class AlunoTeste {
 
 	public static void main(String[] args) {
 		
+		try {
+		
+		
 		String loing = JOptionPane.showInputDialog("qual seu loing");
 		String senha = JOptionPane.showInputDialog("qual sua senha");
 		
@@ -40,7 +43,7 @@ public class AlunoTeste {
 		List<Aluno>alunosRecuperacao = new ArrayList<Aluno>();
 		List<Aluno>alunosReprovado = new ArrayList<Aluno>();
 		
-		for(int qtd = 1;qtd <=2;qtd++) {
+		for(int qtd = 1;qtd <=1;qtd++) {
 		
 		String nome = JOptionPane.showInputDialog("QUALE SEU NOME : "+qtd+"");
 		String idade = JOptionPane.showInputDialog("QUALE SUA IDADE: ");
@@ -125,9 +128,35 @@ public class AlunoTeste {
 		}	
 		
 		
+			
+
+
+
+
+		/*fim*/
+		}catch (Exception e) {
+			StringBuilder saida = new StringBuilder();
+		e.printStackTrace();/*imprimi erro no console*/
+		/*MENSAGEM DE ERRO*/
+		System.out.println("mensagem"+e.getMessage());
+		
+		
+		for(int i = 0;i<= e.getStackTrace().length;i++) {
+			saida.append("classe erro : "+e.getStackTrace()[i].getClassName());
+			saida.append("metodo erro : " +e.getStackTrace()[i].getMethodName());
+			saida.append("linha de erro : "+e.getStackTrace()[i].getLineNumber());
+		}
+		
+		JOptionPane.showMessageDialog(null, "erro ao processar"+saida.toString());
+		}
+
+	}
 	
-
-
-		}}/*fim*/
+}
+		
+	
+		
+		
+	
 		
 
