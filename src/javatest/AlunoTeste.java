@@ -136,12 +136,15 @@ public class AlunoTeste {
 		/*fim*/
 		}catch (Exception e) {
 			StringBuilder saida = new StringBuilder();
+			
 		e.printStackTrace();/*imprimi erro no console*/
+		
 		/*MENSAGEM DE ERRO*/
-		System.out.println("mensagem"+e.getMessage());
+		System.out.println("mensagem : "+e.getMessage());
 		
 		
 		for(int i = 0;i<= e.getStackTrace().length;i++) {
+			
 			saida.append("classe erro : "+e.getStackTrace()[i].getClassName());
 			saida.append("metodo erro : " +e.getStackTrace()[i].getMethodName());
 			saida.append("linha de erro : "+e.getStackTrace()[i].getLineNumber());
