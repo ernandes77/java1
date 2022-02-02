@@ -1,20 +1,27 @@
 package javatest;
 
+import javax.swing.JOptionPane;
+
 public class ArrayVetores {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		double []notas = new double[4];/*ARRAY SEMPRE DEVE E QUANTIDADE DE POSICAO DEFENIDAS*/
-
-		notas[0] = 9.8;
-		notas[1] = 10.0;
-		notas[2]= 5.9;
-		notas[3] = 3.5;
-		for(int pos = 0;pos <=3;pos++ ) {
+	
+		String posicoes = JOptionPane.showInputDialog("qual a poisicao do array: ");
+		
+		double[] notas = new double[Integer.parseInt(posicoes)];
+		
+	for(int pos = 0; pos <notas.length;pos++) {
+		String valor = JOptionPane.showInputDialog("entre com a nota: "+pos);
+		notas[pos] = Double.valueOf(valor);
+		
+	}
+		
+		for(int pos = 0; pos < notas.length;pos++) {
 			
 		
-		
-		System.out.println("nota = "+(pos+1)+" notas "+notas[pos]);
-	}}
+		System.out.println("nota "+ (pos  +1)+ " e = " +notas[pos]);
+		}
+	}	
+	
 
 }
