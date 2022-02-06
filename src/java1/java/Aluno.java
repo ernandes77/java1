@@ -40,7 +40,7 @@ public class Aluno extends Pessoa {
 		
 		for (Disciplina disciplina : Disciplinas) {
 		
-		somaNotas += disciplina.getNota();
+		somaNotas += disciplina.getMediaNotas();
 		}
 		
 		
