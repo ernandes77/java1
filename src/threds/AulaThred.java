@@ -26,6 +26,25 @@ public class AulaThred {
 			};
 		}.start();/*liga a thread que fica processando paralera por tras*/
 		
+		/*----------Divisao------*/
+		
+		new Thread() {
+			public void run() {
+				for(int pos = 0; pos <=10;pos++) {
+			
+					System.out.println("envio de nota fiscal!!!");
+					
+					try {
+						Thread.sleep(4000);
+					} catch (InterruptedException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
+				}
+			};
+			
+		}.start();
+		
 		
 		System.out.println("Chegou ao fim do teste de thread !!!");
 		
