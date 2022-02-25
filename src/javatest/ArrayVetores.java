@@ -9,10 +9,12 @@ public class ArrayVetores {
 
 	public static void main(String[] args) {
 	/*criado objeto aluno*/
+		
 	Aluno aluno = new Aluno();
 	aluno.setNome("ernandes");
 	aluno.setIdade(33);
 	/*criado objeto disciplina*/
+	
 	Disciplina disciplina = new Disciplina();
 	disciplina.setDisciplina("java");
 	double[] notas = {2.3,3.2,6.5,4.5};
@@ -27,6 +29,10 @@ public class ArrayVetores {
 	
 	disciplina2.setNota(notasCss);
 	
+	
+	for(Disciplina d : disciplinas) {
+		
+	}
 	
 	}
 	

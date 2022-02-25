@@ -4,7 +4,7 @@ import java.util.Objects;
 
 public class Disciplina {
 	/* ESSA CLASSE DISCIPLINA SERVIRA PARA TODOS */
-	private double[] nota = new double[4];
+	private double[] nota= new double[4];
 	private String disciplina;
 
 	
