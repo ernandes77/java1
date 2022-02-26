@@ -26,7 +26,7 @@ public class AulaThred {
 			};
 		}.start();/*liga a thread que fica processando paralera por tras*/
 		
-		/*----------Divisao------*/
+		/*----------Divisao das threads------*/
 		
 		new Thread() {
 			public void run() {
