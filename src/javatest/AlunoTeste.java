@@ -32,7 +32,7 @@ public class AlunoTeste {
 	
 		
 		
-		if( new FuncaoAutenticacao (new Secretario(loing,senha)).autenticar()) {
+		if( new FuncaoAutenticacao (new Secretario(loing,senha)).autenticar()) {/*construtor*/
 		
 		
 	
