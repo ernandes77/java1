@@ -87,7 +87,7 @@ public class AlunoTeste {
 			
 			Disciplina disciplina = new Disciplina();
 			disciplina.setDisciplina(nomeDisciplina);
-			disciplina.setNota(Double.valueOf(nota));
+			//disciplina.setNota(Double.valueOf(nota));
 			
 			aluno1.getDisciplinas().add(disciplina);
 		}
@@ -134,7 +134,7 @@ public class AlunoTeste {
 
 
 		/*fim*/
-		}catch (Exception e) {
+		}catch (NumberFormatException e) {
 			StringBuilder saida = new StringBuilder();
 			
 		e.printStackTrace();/*imprimi erro no console*/
@@ -150,7 +150,9 @@ public class AlunoTeste {
 			saida.append("linha de erro : "+e.getStackTrace()[i].getLineNumber());
 		}
 		
-		JOptionPane.showMessageDialog(null, "erro ao processar"+saida.toString());
+			JOptionPane.showMessageDialog(null, "\n erro ao processar"+saida.toString());
+		}catch (NullPointerException e) {
+			JOptionPane.showMessageDialog(null, "\n ops um nullPont"+e.getClass());
 		}
 
 	}
