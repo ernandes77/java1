@@ -140,10 +140,10 @@ public class AlunoTeste {
 		e.printStackTrace();/*imprimi erro no console*/
 		
 		/*MENSAGEM DE ERRO*/
-		System.out.println("mensagem : "+e.getMessage());
+		System.out.println("mensagem erro : "+e.getMessage());
 		
 		
-		for(int i = 0;i<= e.getStackTrace().length;i++) {
+		for(int i = 0;i<= e.getStackTrace().length;i++) {/*varrendo lista de erro com getStacktrace[]*/
 			
 			saida.append("classe erro : "+e.getStackTrace()[i].getClassName());
 			saida.append("metodo erro : " +e.getStackTrace()[i].getMethodName());
