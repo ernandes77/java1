@@ -153,6 +153,8 @@ public class AlunoTeste {
 			JOptionPane.showMessageDialog(null, "\n erro ao processar"+saida.toString());
 		}catch (NullPointerException e) {
 			JOptionPane.showMessageDialog(null, "\n ops um nullPont"+e.getClass());
+		}finally {
+			JOptionPane.showMessageDialog(null, "Obrigado por aprender java comigo");
 		}
 
 	}
