@@ -1,14 +1,18 @@
 package javatest;
 
+import java.io.File;
+import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Scanner;
 
 import javax.swing.JOptionPane;
 
 import classesauxiliares.FuncaoAutenticacao;
 import contantesStaticos.StatusAluno;
+import exeption.ProcessarErroNotas;
 import java1.java.Aluno;
 import java1.java.Diretor;
 import java1.java.Disciplina;
@@ -20,6 +24,8 @@ public class AlunoTeste {
 	public static void main(String[] args) {
 		
 		try {
+			
+		
 		
 		
 		String loing = JOptionPane.showInputDialog("qual seu loing");
@@ -127,11 +133,6 @@ public class AlunoTeste {
 			JOptionPane.showMessageDialog(null, "Acesso nao permetido!!!");
 		}	
 		
-		
-			
-
-
-
 
 		/*fim*/
 		}catch (NumberFormatException e) {
@@ -155,7 +156,14 @@ public class AlunoTeste {
 			JOptionPane.showMessageDialog(null, "\n ops um nullPont"+e.getClass());
 		}finally {
 			JOptionPane.showMessageDialog(null, "Obrigado por aprender java comigo");
-		}
+		}}
+		public void lerArquivo() throws ProcessarErroNotas,FileNotFoundException {
+		try {
+			File fil = new File("c://lines.txt");
+			Scanner scanner = new Scanner(fil);
+		} catch (NullPointerException e) {
+			throw new ProcessarErroNotas(e.getMessage());
+		}		
 
 	}
 	
