@@ -21,12 +21,16 @@ import javainterfaces.PermitirAcesso;
 
 public class AlunoTeste {
 
-	public static void main(String[] args) {
+	public static void main(String[] args)  {
 		
 		try {
-			
 		
-		
+	/*	try {
+				File fil = new File("c://lines.txt");	
+				Scanner scanner = new Scanner(fil);
+		catch (FileNotFoundException e) {
+			throw new ProcessarErroNotas("vix um erro ao processar notas : ");
+		}*/
 		
 		String loing = JOptionPane.showInputDialog("qual seu loing");
 		String senha = JOptionPane.showInputDialog("qual sua senha");
@@ -152,22 +156,25 @@ public class AlunoTeste {
 		}
 		
 			JOptionPane.showMessageDialog(null, "\n erro ao processar"+saida.toString());
-		}catch (NullPointerException e) {
+		}
+		catch (NullPointerException e) {//captura execoes especificas
+			
 			JOptionPane.showMessageDialog(null, "\n ops um nullPont"+e.getClass());
-		}finally {
+		}
+		catch (Exception e) {//captura todas as execoes que nao prevemos
+		e.printStackTrace();
+		JOptionPane.showMessageDialog(null, "erro inesperado : "+e.getClass().getName());
+		}
+		
+		finally {//finally sempre e executado quando precisa executa um sistema ocorrendo erro ou nao
 			JOptionPane.showMessageDialog(null, "Obrigado por aprender java comigo");
-		}}
-		public void lerArquivo() throws ProcessarErroNotas,FileNotFoundException {
-		try {
-			File fil = new File("c://lines.txt");
-			Scanner scanner = new Scanner(fil);
-		} catch (NullPointerException e) {
-			throw new ProcessarErroNotas(e.getMessage());
-		}		
+		}
+		}
+	
 
 	}
 	
-}
+
 		
 	
 		
