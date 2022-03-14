@@ -38,7 +38,7 @@ public class AlunoTeste {
 		
 		
 		
-		PermitirAcesso permitirAcesso = new Diretor(loing,senha);/*interface e igual a objeto secretario*/
+		
 	
 		
 		
