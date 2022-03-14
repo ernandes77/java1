@@ -11,10 +11,17 @@ public class Matrizes {
 	notas [0][1]=60;
 	notas [0][2]=50;
 
-	notas [1][1]= 10;
-	notas [1][2]= 35;
-	notas [1][3]= 15;
-	System.out.println(notas);
+	notas [1][0]= 10;
+	notas [1][1]= 35;
+	notas [1][2]= 15;
+	
+	for(int poslinha = 0; poslinha <notas.length;poslinha++) {
+		System.out.println("---------------------");
+		for(int poscoluna = 0;poscoluna < notas[poslinha].length;poscoluna++) {
+			System.out.println("valor da matriz : "+notas[poslinha][poscoluna]);
+		}
+	}
+	
 	}
 
 }
