@@ -30,6 +30,8 @@ public class ArrayVetores {
 	
 	aluno.getDisciplinas().add(disciplina2);
 	
+	//----------------------------------------------
+	
 	System.out.println(" aluno: "+aluno.getNome()+" Inscrito no curso : "+aluno.getNomeEscola());
 	System.out.println("----------------MATERIAS DO ALUNO----------------");
 	
