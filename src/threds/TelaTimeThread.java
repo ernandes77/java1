@@ -4,13 +4,20 @@ import javax.swing.JLabel;
 
 import javax.swing.JPanel;
 import javax.swing.JTextField;
+import javax.swing.event.AncestorEvent;
+import javax.swing.event.AncestorListener;
 
 import java.awt.BorderLayout;
 import java.awt.Dimension;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
 import java.awt.Insets;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
 
+import javax.swing.AbstractAction;
 import javax.swing.JButton;
 import javax.swing.JDialog;
 import javax.swing.JPanel;
@@ -30,6 +37,26 @@ public class TelaTimeThread extends JDialog{
 
 	JButton jButton = new JButton("Start");
 	JButton jButton2 = new JButton("Stop");
+	
+	Runnable thread = new Runnable() {
+	
+		public void run() {
+	
+			while (true) {//fica sempre rodando
+				mostraTempo.setText(new SimpleDateFormat("dd/MM/yyyy hh:mm.ss")//chamando data e hora
+						.format(Calendar.getInstance().getTime()));
+				
+				try {
+					Thread.sleep(1000);//executar com minutis devagar
+				} catch (InterruptedException e) {
+					e.printStackTrace();
+				}
+			}
+			
+		}
+	};
+	
+	Thread thread1time;//CRIA O OBJETO
 	
 		setTitle("Minha tela");//title nome do titulo da tela
 		setSize(new Dimension (240, 240));//tamanho da tela
@@ -77,8 +104,27 @@ public class TelaTimeThread extends JDialog{
 		gridBagConstraints.gridx++;
 		jPanel.add(jButton2,gridBagConstraints);
 	
-	
-	
+		jButton.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {//executar o click no botao
+				
+				Thread thread1time = new Thread(thread);
+				thread1time.start();
+				
+			}
+		});
+		
+		jButton2.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+			thread1time.stop();
+				
+			}
+		});
+		
+		
 		add(jPanel, BorderLayout.WEST);//CHAMADO O PAINEL Jpanel
 	
 	setVisible(true);//chama a tela para visualizar
