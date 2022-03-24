@@ -38,7 +38,7 @@ public class TelaTimeThread extends JDialog{
 	JButton jButton = new JButton("Start");
 	JButton jButton2 = new JButton("Stop");
 	
-	Runnable thread = new Runnable() {
+	Runnable thread = new Runnable() {// passo 1
 	
 		public void run() {
 	
@@ -56,7 +56,7 @@ public class TelaTimeThread extends JDialog{
 		}
 	};
 	
-	Thread thread1time;//CRIA O OBJETO
+	Thread thread1time;//CRIA O OBJETO passo 2
 	
 		setTitle("Minha tela");//title nome do titulo da tela
 		setSize(new Dimension (240, 240));//tamanho da tela
@@ -104,13 +104,15 @@ public class TelaTimeThread extends JDialog{
 		gridBagConstraints.gridx++;
 		jPanel.add(jButton2,gridBagConstraints);
 	
-		jButton.addActionListener(new ActionListener() {
+		jButton.addActionListener(new ActionListener() {//passo 3
 			
 			@Override
 			public void actionPerformed(ActionEvent e) {//executar o click no botao
 				
 				Thread thread1time = new Thread(thread);
 				thread1time.start();
+				
+				
 				
 			}
 		});
@@ -119,7 +121,8 @@ public class TelaTimeThread extends JDialog{
 			
 			@Override
 			public void actionPerformed(ActionEvent e) {
-			thread1time.stop();
+		
+				Thread thread1time.stop();
 				
 			}
 		});
